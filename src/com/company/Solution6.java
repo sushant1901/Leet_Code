@@ -1,4 +1,4 @@
-package com.company;
+/*package com.company;
 class Solution6 {
     public int change(int amount, int[] coins) {
         return totalWays(coins,0,amount,new HashMap<String,Integer>());
@@ -25,3 +25,4 @@ class Solution6 {
         return consider + notConsider;
     }
 }
+*/
