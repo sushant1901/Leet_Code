@@ -9,8 +9,6 @@ class Solution {
         
         if(memo.containsKey(cH))
             return memo.get(cH);
-        
-       
         int rob=nums[cH]+maxMoney(nums,cH+2,memo);
         int norob=maxMoney(nums,cH+1,memo);
         
