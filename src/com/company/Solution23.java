@@ -2,6 +2,7 @@ class Solution {
     public int findTargetSumWays(int[] nums, int target) {
         return totalWays(nums, target, 0,new HashMap<String,Integer>());
     }
+    
     public int totalWays(int[] nums, int target, int currentIndex, HashMap<String,Integer> memo){
         if(currentIndex >= nums.length){
             if(target!=0)
