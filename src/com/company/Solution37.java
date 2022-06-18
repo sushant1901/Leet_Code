@@ -14,6 +14,7 @@ class Solution {
         }
         return area;
     }
+    
     public int maxLength(char[][] matrix,int currentRow, int currentCol, int m, int n, int[][] memo){
         if(currentRow < 0 || currentRow >=m || currentCol < 0 || currentCol >= n || matrix[currentRow][currentCol]=='0'){
             return 0;
