@@ -8,7 +8,6 @@ class Solution5 {
                 }
             }
         }
-        // In case there is no solution, we'll just return null
         return null;
     }
 }
