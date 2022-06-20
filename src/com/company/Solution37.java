@@ -31,5 +31,6 @@ class Solution {
         memo.put(currentKey,Math.min(right,Math.min(down,rightDiag)));
         
         return Math.min(right,Math.min(down,rightDiag));
+        
     }
 }
