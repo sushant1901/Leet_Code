@@ -10,7 +10,6 @@ class Solution {
         return (1 + area(r+1, c) + area(r-1, c)
                   + area(r, c-1) + area(r, c+1));
     }
-
     public int maxAreaOfIsland(int[][] grid) {
         this.grid = grid;
         seen = new boolean[grid.length][grid[0].length];
