@@ -11,6 +11,5 @@ class Solution {
         newNode.right=merge(t1.right,t2.right);
         
         return newNode;
-        
     }
 }
