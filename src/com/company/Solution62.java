@@ -10,6 +10,7 @@ class Solution {
             return;
         }
         currentSubset.add(nums[currentIndex]);
+
         generateSubset(nums,currentIndex+1,currentSubset,answer);
         currentSubset.remove(currentSubset.size()-1);
         generateSubset(nums,currentIndex+1,currentSubset,answer);
