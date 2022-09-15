@@ -15,36 +15,29 @@
  */
 class Solution {
     public boolean isCousins(TreeNode root, int x, int y) {
-        int levels[] = {-1,-1};
-        TreeNode parents[] = {null,null};
+        int [] parent=new int[2];
+        int [] level=new int[2];
         
-        findNodes(root, x , y, 0, null, levels, parents);
-        
-        return levels[0] == levels[1] && parents[0] != parents[1];
+        findParentAndLevel(root,new TreeNode(-1),0,x,y,parent,level);
+        return parent[0]!=parent[1] && level[0]==level[1];
         
     }
     
-    private void findNodes(TreeNode root, int x, int y, int currentLevel, TreeNode currentParent,int levels[], TreeNode parents[]){
+    private void findParentAndLevel(TreeNode root,TreeNode currentParent,int currentLevel,int x,int y,int[] parent,int[] level){
+        if(root==null) return;
         
-        if(root == null){
-            return;
+        if(root.val== x){
+            parent[0]=currentParent.val;
+            level[0]=currentLevel;
         }
         
-        if(root.val == x){
-            levels[0] = currentLevel;
-            parents[0] = currentParent;
+        if(root.val== y){
+            parent[1]=currentParent.val;
+            level[1]=currentLevel;
         }
         
-        if(root.val == y){
-            levels[1] = currentLevel;
-            parents[1] = currentParent;
-        }
-        
-        findNodes(root.left, x , y, currentLevel + 1, root, levels, parents);
-        findNodes(root.right, x , y, currentLevel + 1, root, levels, parents);
-        
+        findParentAndLevel(root.left,root,currentLevel+1,x,y,parent,level);
+        findParentAndLevel(root.right,root,currentLevel+1,x,y,parent,level);
         return;
-        
     }
-    
 }
