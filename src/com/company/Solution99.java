@@ -16,7 +16,6 @@ class Node {
     }
 };
 */
-
 class Solution {
     public List<Integer> preorder(Node root) {
         List<Integer> answer= new ArrayList<>();
