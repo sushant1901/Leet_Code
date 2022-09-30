@@ -9,6 +9,7 @@ class Solution {
             else
                 right = mid;
         }
+                
         return Arrays.stream(A, left, left + k).boxed().collect(Collectors.toList());
     
     }`
