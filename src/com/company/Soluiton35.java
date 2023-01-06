@@ -19,5 +19,6 @@ class Solution {
         
         memo.put(currentKey,Math.min(rightMove,downMove));
         return Math.min(rightMove,downMove);
+        
     }
 }
