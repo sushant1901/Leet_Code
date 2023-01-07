@@ -14,5 +14,6 @@ class Solution {
             }
         }
         return arrowCount;
+
     }
 }
