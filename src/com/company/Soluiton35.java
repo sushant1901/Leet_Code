@@ -18,7 +18,6 @@ class Solution {
         int downMove=grid[currentRow][currentCol] + minSum(grid,currentRow+1,currentCol,m,n,memo);
         
         memo.put(currentKey,Math.min(rightMove,downMove));
-        return Math.min(rightMove,downMove);
-        
+        return Math.min(rightMove,downMove);        
     }
 }
