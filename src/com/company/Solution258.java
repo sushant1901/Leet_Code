@@ -7,7 +7,7 @@ class Solution {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 1) {
                     visited[i][j] = true;
-                    q.offer(new int[]{i, j});
+                    q.offer(new int[]{i, j}); 
                 }
             }
         }
