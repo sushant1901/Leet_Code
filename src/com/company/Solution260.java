@@ -22,6 +22,7 @@ class Solution {
                 smallest = count;
             }
         }
+          
         return res;
     }
 }
