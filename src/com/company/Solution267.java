@@ -13,6 +13,7 @@ class Solution {
             else {
                 left++;
                 right--;
+                
             }
         }
         return max;
