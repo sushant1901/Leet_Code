@@ -19,3 +19,24 @@ class Solution {
         return answer;
     }
 }
+
+// optimized approach
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int answer=0;
+        HashMap<Character,Integer>memo= new HashMap<>();
+
+        int release=0;
+        for(int i=0;i<s.length();i++){
+            Character currentChar=s.charAt(i);
+            if(memo.containsKey(currentChar) && memo.get(currentChar)>= release)
+            release= memo.get(currentChar)+1;
+
+            memo.put(currentChar,i);
+            answer = Math.max(answer,i-release+1);
+        }
+
+        return answer;
+    }
+}
