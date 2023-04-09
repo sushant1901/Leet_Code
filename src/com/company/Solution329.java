@@ -17,6 +17,7 @@ class Node {
     }
 }
 */
+
 class Solution {
     public void dfs(Node node , Node copy , Node[] visited){
         visited[copy.val] = copy;
