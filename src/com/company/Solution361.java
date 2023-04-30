@@ -1,4 +1,5 @@
-public int[] smallerNumbersThanCurrent(int[] nums) {
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
     int[] ans = nums.clone();
     int count = 0;
     HashMap<Integer, Integer> hm = new HashMap<>();
@@ -16,4 +17,5 @@ public int[] smallerNumbersThanCurrent(int[] nums) {
         ans[i] = hm.get(ans[i]);
     
     return ans;
+} 
 }
