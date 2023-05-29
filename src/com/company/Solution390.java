@@ -5,6 +5,7 @@ class ParkingSystem {
     public ParkingSystem(int big, int medium, int small) {
         this.bigLimit = big;
         this.mediumLimit = medium;
+        
         this.smallLimit = small;
         this.parkingArray = new int[big + medium + small];
         for (int i = 0; i < this.parkingArray.length; i++) {
