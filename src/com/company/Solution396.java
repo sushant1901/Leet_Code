@@ -18,3 +18,33 @@ class Solution {
         return C;
     }
 }
+//TC= O(n^2)
+
+
+class Solution {
+    public int[] findThePrefixCommonArray(int[] A, int[] B) { 
+        int comm = 0;
+        int[] freq  = new int[51];
+        int[] ans = new int[A.length];
+        freq[A[0]]++;
+        freq[B[0]]++;
+        int c = 1;
+        if(A[0] == B[0]) comm++;
+        ans[0] = comm;
+        for(int i = 1; i < A.length; i++)   {    
+            if(freq[A[i]] > 0) comm++;  
+            if(freq[B[i]] > 0) comm++;
+            if(A[i] == B[i]) comm++;
+            freq[A[i]]++;
+            freq[B[i]]++;
+            ans[c]1 = comm;   
+            c++;
+            
+        }
+        
+        return ans;
+        
+    }
+}
+
+//TC= O(n);
