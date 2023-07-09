@@ -5,7 +5,6 @@ class Solution {
             counter[(int)(ch - 'a')]++;
         }
         int globalMax = 0;
-        
         for (int i = 0; i < 26; i++) {
             for (int j = 0; j < 26; j++) {
                 if (i == j || counter[i] == 0 || counter[j] == 0) {
